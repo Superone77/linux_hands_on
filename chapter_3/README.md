@@ -13,7 +13,7 @@
 ![结果1](2.png)
 
 实验代码：
-[soft_ipc.c](/lab1/soft_ipc.c)
+[soft_ipc.c](lab1/soft_ipc.c)
 
 ##### 程序2
 编制实现进程的管道通信的程序。父进程开通pipe，并fork两个子进程。接收来自于子进程的信息并输出在Shell里。
@@ -25,4 +25,4 @@
 ![结果2](4.png)
 
 实验代码：
-[pipe_ipc.c](/lab2/pipe_ipc.c)
+[pipe_ipc.c](lab2/pipe_ipc.c)

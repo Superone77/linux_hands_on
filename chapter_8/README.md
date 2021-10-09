@@ -56,11 +56,14 @@ sum+=i是临界区（一段被多个更新共享资源的线程执行的代码�
 给每个线程定义一个求部分和的局部变量，然后对每个线程对部分和局部变量再求和。
 
 [mp.acc4.c](mp-acc4.c)
-可以使用default、shared、private子句来为变量指定作用域。
-shared说明该变量在共享作用域
-private说明该变量在每个线程中声明一个新对象
-firstprivate 说明该变量在每个线程开始时根据并行区外的值初始化
-lastprivate 子句指定的变量不仅是private作用范围，同时会将最后一次迭代或最后一个section执行的值复制回原来的变量
-default(none)时必须显式地为所有变量指定作用域
-default(shared)时没显式指定的变量都在共享作用域
+可以使用default、shared、private子句来为变量指定作用域。  
+shared说明该变量在共享作用域    
+private说明该变量在每个线程中声明一个新对象   
+firstprivate 说明该变量在每个线程开始时根据并行区外的值初始化   
+lastprivate 子句指定的变量不仅是private作用范围，同时会将最后一次迭代或最后一个section执行的值复制回原来的变量    
+default(none)时必须显式地为所有变量指定作用域    
+default(shared)时没显式指定的变量都在共享作用域    
+
+[mp-parallel-for.c](mp-parallel-for.c)  
+parallel for用于生成一个并行域，并将计算任务在多个线程之间分配，从而加快计算运行的速度。可以让系统默认分配线程个数，也可以使用num_threads子句指定线程个数。
 
